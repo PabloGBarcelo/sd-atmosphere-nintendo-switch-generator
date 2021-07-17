@@ -42,7 +42,7 @@ def main():
                 createExtraFolders("Payload Hekate para tegraRCM")
                 createHekateIPL()
             adaptFiles(selectedSystem)
-            print("\nNeoSX, EOLiano desde 2002.\nTienes la carpeta microsd ya lista en este mismo directorio, cópia el contenido a tu tarjeta microSD y a disfrutar.")
+            print("\nTienes la carpeta microsd ya lista en este mismo directorio, cópia el contenido a tu tarjeta microSD y a disfrutar.")
             input("Presiona ENTER para finalizar...")
         else:
             firstClean(sdFolder)
