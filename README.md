@@ -3,7 +3,7 @@ Script to generate automatically Hekate and/or Atmosphere microSD.
 
 Make it works!
 
-pip install requests && pip install pyquery
+pip install -u requeriments.txt
 
 python app.py
 
