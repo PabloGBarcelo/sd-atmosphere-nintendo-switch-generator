@@ -94,14 +94,14 @@ fss0=atmosphere/fusee-secondary.bin
 emummc_force_disable=1
 stock=1
 icon=bootloader/res/icon_switch.bmp
-")''')
+''')
     print("Creación de Hekate IPL con éxito")
     return
 
 def adaptFiles(selectedSystem):
     print("Finalizando operaciones...")
     if os.name == "posix":
-        os.rename(os.getcwd()+"/"+item, os.getcwd()+"/switch/"+item)
+        os.rename(os.getcwd()+"/caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
     else:
         # for windows platfrom
         os.rename(os.getcwd()+"\\caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
