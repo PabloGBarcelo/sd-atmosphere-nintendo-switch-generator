@@ -75,14 +75,14 @@ updater2p=1
 backlight=100
 
 [CFW - sysMMC]
-fss0=atmosphere/fusee-secondary.bin
+fss0=atmosphere/package3
 kip1patch=nosigchk
 atmosphere=1
 emummc_force_disable=1
 icon=bootloader/res/icon_payload.bmp
 
 [CFW - emuMMC]
-fss0=atmosphere/fusee-secondary.bin
+fss0=atmosphere/package3
 kip1patch=nosigchk
 emummcforce=1
 atmosphere=1
@@ -90,7 +90,7 @@ icon=bootloader/res/icon_payload.bmp
 logopath=bootloader/bootlogo.bmp
 
 [Stock - sysMMC]
-fss0=atmosphere/fusee-secondary.bin
+fss0=atmosphere/package3
 emummc_force_disable=1
 stock=1
 icon=bootloader/res/icon_switch.bmp
