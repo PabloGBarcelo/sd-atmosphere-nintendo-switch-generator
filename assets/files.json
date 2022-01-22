@@ -2,42 +2,49 @@
     "atmosphere":{
         "url": "https://github.com/Atmosphere-NX/Atmosphere/releases",
         "option": ["1","2"],
-        "source": "github"
+        "source": "github",
+        "position": 0
     },
 
     "hekate":{
         "url": "https://github.com/CTCaer/hekate/releases",
         "option": ["1"],
-        "source": "github"
+        "source": "github",
+        "position": 0
     },
 
     "sigpatches":{
         "url": "https://github.com/ITotalJustice/patches/releases",
         "option": ["1","2"],
-        "source": "github"
+        "source": "github",
+        "position": 0
     },
 
     "jksv":{
         "url": "https://github.com/J-D-K/JKSV/releases",
         "option": ["1","2"],
-        "source": "github"
+        "source": "github",
+        "position": 0
     },
 
     "goldleaf": {
         "url": "https://github.com/XorTroll/Goldleaf/releases",
         "option": ["1","2"],
-        "source": "github"
+        "source": "github",
+        "position": 0
     },
     
     "caffeine": {
         "url": "https://github.com/AtlasNX/caffeine/releases",
         "option": ["1","2"],
-        "source": "github"
+        "source": "github",
+        "position": 0
     },
     "bootlogo": {
         "url": "https://drive.google.com/uc?id=1HYvYpOBtneWsx5I4yhR_o2IAp7dIIrcw",
         "option": ["1"],
-        "source": "direct"
+        "source": "direct",
+        "position": 0
     }
 
 }
