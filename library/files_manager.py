@@ -9,6 +9,7 @@
 
 import os
 import shutil
+from dotenv import main
 import requests
 from zipfile import ZipFile
 from pyquery import PyQuery as pq
@@ -101,7 +102,7 @@ icon=bootloader/res/icon_switch.bmp
 def adaptFiles(selectedSystem):
     print("Finalizando operaciones...")
     if os.name == "posix":
-        os.rename(os.getcwd()+"/caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
+        os.rename(os.getcwd()+"\\caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
     else:
         # for windows platfrom
         os.rename(os.getcwd()+"\\caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
@@ -131,15 +132,16 @@ def downloadFiles(optionSelected, files):
                 if data.status_code == 200:
                     if value['source'] == 'github':
                         data = pq(data.text)
-                        mainData = pq(data('.release-main-section'))
-                        title = pq(mainData('.release-header .flex-items-start .flex-auto')[0])
+                        #mainData = pq(data('.release-main-section'))
+                        mainData = pq(data('div[data-test-selector="release-card"]'))
+                        title = pq(mainData('.Link--primary')[0])
                         print("Versión detectada: {0}".format(title.text()))
-                        if key == 'sigpatches' and optionSelected == "1":
-                            fileToDownload = 1 # Second position in sigpatches for hekate in iTotalJustice
-                        else:
-                            fileToDownload = 0 # Fisrt file for rest of them
-                        fileName = pq(mainData('.Box-body')[fileToDownload])
-                        urlFile = pq(mainData('.Box-body')[fileToDownload])('a')
+                        # if key == 'sigpatches' and optionSelected == "1":
+                        #     fileToDownload = 1 # Second position in sigpatches for hekate in iTotalJustice
+                        # else:
+                        # fileToDownload = 0 # Fisrt file for rest of them
+                        fileName = pq(mainData('.Box-row')[value['position']])
+                        urlFile = pq(mainData('.Box-row')[value['position']])('a')
                         print("Descargando {0}".format(fileName.text()))
                         file = requests.get(baseUrl+urlFile.attr('href'), allow_redirects=True)
                         if file.status_code == 200:
