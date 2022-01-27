@@ -102,7 +102,15 @@ icon=bootloader/res/icon_switch.bmp
 def adaptFiles(selectedSystem):
     print("Finalizando operaciones...")
     if os.name == "posix":
-        os.rename(os.getcwd()+"\\caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
+        os.rename(os.getcwd()+"/caffeine.nsp", os.getcwd()+"/pegascape/caffeine.nsp")
+        if selectedSystem == "1":
+            os.rename(os.getcwd()+"/bootlogo.bmp", os.getcwd()+"/bootloader/bootlogo.bmp")
+            os.rename(os.getcwd()+"/hekate_ipl.ini", os.getcwd()+"/bootloader/hekate_ipl.ini")
+            binFiles = os.listdir(".")
+            for item in binFiles:
+                if item.endswith(".bin"):
+                    shutil.copy2(os.getcwd()+"/"+item,os.getcwd()+"/atmosphere/reboot_payload.bin")
+                    os.rename(os.getcwd()+"/"+item, os.getcwd()+"/Payload Hekate para tegraRCM/payload.bin")
     else:
         # for windows platfrom
         os.rename(os.getcwd()+"\\caffeine.nsp", os.getcwd()+"\\pegascape\\caffeine.nsp")
