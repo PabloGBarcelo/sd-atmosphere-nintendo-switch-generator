@@ -17,7 +17,7 @@ from library.screen import screenClear
 def copyright():
     print('''
 ############################################################
-#  Script autodescargable 0.1                              #
+#  Script autodescargable 0.1 - Nintendo Switch by NeoSX   #
 ############################################################
 ''')
     return

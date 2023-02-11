@@ -12,14 +12,6 @@
         "source": "github",
         "position": 0
     },
-
-    "sigpatches":{
-        "url": "https://github.com/ITotalJustice/patches/releases",
-        "option": ["1","2"],
-        "source": "github",
-        "position": 0
-    },
-
     "jksv":{
         "url": "https://github.com/J-D-K/JKSV/releases",
         "option": ["1","2"],
@@ -43,8 +35,13 @@
     "bootlogo": {
         "url": "https://drive.google.com/uc?id=1HYvYpOBtneWsx5I4yhR_o2IAp7dIIrcw",
         "option": ["1"],
+        "source": "google",
+        "position": 0
+    },
+    "sigpatches": {
+        "url": "https://sigmapatches.coomer.party/sigpatches.zip",
+        "option": ["1","2"],
         "source": "direct",
         "position": 0
     }
-
 }
