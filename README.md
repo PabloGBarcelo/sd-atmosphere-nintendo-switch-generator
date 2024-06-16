@@ -1,5 +1,5 @@
 # SD Atmosphere and Hekate with sigpatches Generator
-Up to date FW > 15.0.0 with atmoshpere package3
+Up to date FW >= 18.0.0 with atmoshpere package3
 
 Script to generate automatically Hekate and/or Atmosphere microSD.
 
