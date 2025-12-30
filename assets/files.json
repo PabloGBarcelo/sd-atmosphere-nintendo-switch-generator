@@ -10,7 +10,7 @@
         "url": "https://github.com/CTCaer/hekate/releases",
         "option": ["1"],
         "source": "github",
-        "position": 0
+        "position": 1
     },
     "jksv":{
         "url": "https://github.com/J-D-K/JKSV/releases",
