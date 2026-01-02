@@ -107,7 +107,6 @@ icon=bootloader/res/icon_payload.bmp
 
 [CFW - emuMMC]
 fss0=atmosphere/package3
-kip1patch=nosigchk
 emummcforce=1
 atmosphere=1
 icon=bootloader/res/icon_payload.bmp
